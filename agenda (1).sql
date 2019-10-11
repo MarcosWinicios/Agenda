@@ -25,17 +25,18 @@ DROP TABLE IF EXISTS `contato`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `contato` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) DEFAULT NULL,
   `endereco` varchar(45) DEFAULT NULL,
-  `telefone2` varchar(45) DEFAULT NULL,
   `telefone1` varchar(45) DEFAULT NULL,
+  `telefone2` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `dataNascimento` varchar(45) DEFAULT NULL,
   `profissao` varchar(45) DEFAULT NULL,
   `sexo` varchar(45) DEFAULT NULL,
   `estadoCivil` varchar(45) DEFAULT NULL,
-  `escolaridade` varchar(45) DEFAULT NULL
+  `escolaridade` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -57,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-10 21:01:02
+-- Dump completed on 2019-10-10 22:11:15
