@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.marcos.agenda.logica.Logica;
 
 
-@WebServlet("/ControllerServlet")
+@WebServlet("/sistema")
 public class ControllerServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
