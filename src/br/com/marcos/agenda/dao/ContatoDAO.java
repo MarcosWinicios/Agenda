@@ -39,4 +39,20 @@ public class ContatoDAO {
 		}
 	}
 	
+	public Contato pesquisarNome(String nome) {
+		String sql = "SELECT * FROM contato WHERE nome = ?";
+		try {
+			this.stmt = conexao.prepareStatement(sql);
+			this.stmt.setString(1, nome);
+			ResultSet rs = this.stmt.executeQuery();
+			Contato c =  new Contato();
+			while(rs.next()) {
+				c = new Contato(rs.getInt("id"), rs.getString("nome"), rs.getString("endereco"), rs.getString("telefone1"), rs.getString("telefone2"), rs.getString("email"), rs.getString("dataNascimento"), rs.getString("profissao"), rs.getString("sexo"), rs.getString("estadoCivil"), rs.getString("escolaridade"));
+			}
+			this.stmt.close();
+			return c;
+		}catch(Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
 }

@@ -18,7 +18,13 @@ public class Teste1 {
 		c.setEscolaridade("Cursando Ensino Superior");
 		
 		ContatoDAO cDAO = new ContatoDAO();
-		cDAO.inserirContato(c);
+		//cDAO.inserirContato(c);
+		System.out.println("teste");
+		
+		Contato cont = cDAO.pesquisarNome("Marcos");
+		System.out.println(cont.getNome());
+		System.out.println(cont.toString());
+		
 	}
 	
 }

@@ -13,6 +13,34 @@ public class Contato {
 	private String estadoCivil;
 	private String escolaridade;
 	
+	
+	
+	public Contato() {
+
+	}
+	public Contato(int id, String nome, String endereco, String telefone1, String telefone2, String email,
+			String dataNascimento, String profissao, String sexo, String estadoCivil, String escolaridade) {
+
+		this.id = id;
+		this.nome = nome;
+		this.endereco = endereco;
+		this.telefone1 = telefone1;
+		this.telefone2 = telefone2;
+		this.email = email;
+		this.dataNascimento = dataNascimento;
+		this.profissao = profissao;
+		this.sexo = sexo;
+		this.estadoCivil = estadoCivil;
+		this.escolaridade = escolaridade;
+	}
+	
+	@Override
+	public String toString() {
+		String contato = this.getNome() + this.getEndereco() + this.getTelefone1() + this.getTelefone2() + this.getEmail();
+		
+		return contato;
+	}
+	
 	public int getId() {
 		return id;
 	}
